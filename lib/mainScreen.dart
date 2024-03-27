@@ -37,7 +37,7 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("Widgets"),),
-      body: SingleChildScrollView(
+      body: SingleChildScrollView( // for scroll feature
         child: Center(child: Column(children: [
           Text(receivedData),
           Padding(
@@ -196,7 +196,7 @@ class _MainScreenState extends State<MainScreen> {
                   then((value) {
                     tfTime.text = "${value!.hour} : ${value.minute}";
                   });
-                }, icon: Icon(Icons.timer_outlined)),
+                }, icon: const Icon(Icons.timer_outlined)),
         
                 SizedBox( width: 120,
                   child: TextField(controller: tfDate, decoration: InputDecoration.collapsed(hintText: "Date"),)
@@ -206,7 +206,7 @@ class _MainScreenState extends State<MainScreen> {
                   then((value) {
                     tfDate.text = "${value!.day}/${value.month}/${value.year}";
                   });
-                }, icon: Icon(Icons.date_range_outlined)),
+                }, icon: const Icon(Icons.date_range_outlined)),
         
               ],
             ),
